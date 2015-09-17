@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Anim HEX</title>
+
+<script src='http://codepen.io/assets/libs/prefixfree.min.js'></script>
+<script src="/modules/mod_progress/dist/progressbar.js"></script>
+
+<style>
+/* Font Embedding */
+@font-face {
+  font-family: 'proxima nova bold';
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-bold-webfont.eot');
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-bold-webfont.woff') format('woff'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-bold-webfont.ttf') format('truetype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima nova regular';
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-regular-webfont.eot');
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-regular-webfont.woff') format('woff'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-regular-webfont.ttf') format('truetype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima nova light';
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-light-webfont.eot');
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-light-webfont.woff') format('woff'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-light-webfont.ttf') format('truetype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/proximanova-light-webfont.svg#proxima_nova_ltregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'neosans regular';
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/neosans-medium-webfont.eot');
+  src: url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/neosans-medium-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/neosans-medium-webfont.woff') format('woff'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/neosans-medium-webfont.ttf') format('truetype'), url('http://www.adhamdannaway.com/wp-content/themes/ad/fonts/neosans-medium-webfont.svg#neosansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.hex-container {
+    width: 150px;
+    /*height: 150px;*/
+	display:inline-block;
+	margin-top:-0px;
+	margin-left:-5px;
+	margin-right:-5px;
+	margin-bottom:-22px;
+	overflow:hidden;
+}
+
+.hex-container > svg {
+    width: 100%;
+    display: block;
+}
+
+.hex-container div {
+	width:100%;
+	margin-bottom:-110px;
+	text-align:center;
+	font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-size:14px;
+	overflow:hidden;
+}
+
+.hex-container div h3 {
+	font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-size:40px;
+	margin-top:0px;
+	padding-top:50px;
+	margin-bottom:0px;
+}
+
+
+@media (min-width: 980px) {
+#progress {width:100%; max-width:861px; margin-left:auto; margin-right:auto;}
+#progress .hex-container:nth-child(11n-4) {margin-left:65px;}
+}
+
+@media (min-width: 685px) and (max-width: 979px) {
+#progress {width:100%; max-width:645px; margin-left:auto; margin-right:auto;}
+#progress .hex-container:nth-child(8n-3) {margin-left:65px;}
+}
+
+@media (min-width: 444px) and (max-width: 684px) {
+#progress {width:100%; max-width:430px; margin-left:auto; margin-right:auto;}
+#progress .hex-container:nth-child(5n-1) {margin-left:65px;}
+}
+
+@media (min-width: 369px) and (max-width: 443px) {
+#progress {width:100%; max-width:371px; margin-left:auto; margin-right:auto;}
+#progress .hex-container:nth-child(4n-1) {margin-left:65px;}
+}
+
+@media (max-width: 368px) {
+#progress {width:100%; max-width:210px; margin-left:auto; margin-right:auto;}
+#progress .hex-container:nth-child(2n) {margin-left:65px;}
+.hex-container {margin-bottom:-38px;}
+}
+
+</style>
+</head>
+
+<body>
+<h3>Skills :</h3>
+<div id="progress">
+
+<div class="hex-container">
+<div><h3>HTML</h3>-HTML5-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-1" fill-opacity="0" stroke-width="25" stroke="#CC0033" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+
+</div>
+
+
+<div class="hex-container">
+<div><h3>CSS</h3>-CSS3-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-2" fill-opacity="0" stroke-width="25" stroke="#0077BB" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>PHP</h3>-PHP5-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-3" fill-opacity="0" stroke-width="25" stroke="#FFCF4A" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>JS</h3>-JavaScript-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-4" fill-opacity="0" stroke-width="25" stroke="#6633CC" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Dw</h3>-Dreamweaver-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-5" fill-opacity="0" stroke-width="25" stroke="#009933" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Ai</h3>-Illustrator-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-6" fill-opacity="0" stroke-width="25" stroke="#FF9900" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Id</h3>-InDesign-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-7" fill-opacity="0" stroke-width="25" stroke="#CC3399" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Ps</h3>-Photoshop-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-8" fill-opacity="0" stroke-width="25" stroke="#0095C5" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Pr</h3>-Premiere-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-9" fill-opacity="0" stroke-width="25" stroke="#9900CC" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+<div class="hex-container">
+<div><h3>Ae</h3>-AfterEffect-</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 720 720">
+    <path fill-opacity="0" stroke-width="25" stroke="#f4f4f4" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+    <path id="hex-path-10" fill-opacity="0" stroke-width="25" stroke="#222222" 
+	d="M360,7.19 L663.974 182.695 L663.974 533.695 L360 709.195 L56.024 533.695 L56.024 182.695 L360 7.249 Z"/>
+</svg>
+</div>
+
+
+
+</div>
+<script>
+var svgPath = document.getElementById('hex-path-1');
+
+var path = new ProgressBar.Path(svgPath, {
+    duration: 3000,
+});
+
+path.animate(0.62, function() {
+        path.animate(0.92);
+});
+</script>
+
+<script>
+var svgPath2 = document.getElementById('hex-path-2');
+
+var path2 = new ProgressBar.Path(svgPath2, {
+    duration: 3000,
+});
+
+path2.animate(0.68, function() {
+        path2.animate(0.98);
+});
+</script>
+
+<script>
+var svgPath3 = document.getElementById('hex-path-3');
+
+var path3 = new ProgressBar.Path(svgPath3, {
+    duration: 3000,
+});
+
+path3.animate(0.61, function() {
+        path3.animate(0.91);
+});
+</script>
+
+<script>
+var svgPath4 = document.getElementById('hex-path-4');
+
+var path4 = new ProgressBar.Path(svgPath4, {
+    duration: 3000,
+});
+
+path4.animate(0.1, function() {
+        path4.animate(0.4);
+});
+</script>
+
+<script>
+var svgPath5 = document.getElementById('hex-path-5');
+
+var path5 = new ProgressBar.Path(svgPath5, {
+    duration: 3000,
+});
+
+path5.animate(0.69, function() {
+        path5.animate(0.99);
+});
+</script>
+
+<script>
+var svgPath6 = document.getElementById('hex-path-6');
+
+var path6 = new ProgressBar.Path(svgPath6, {
+    duration: 3000,
+});
+
+path6.animate(0.6, function() {
+        path6.animate(0.9);
+});
+</script>
+
+<script>
+var svgPath7 = document.getElementById('hex-path-7');
+
+var path7 = new ProgressBar.Path(svgPath7, {
+    duration: 3000,
+});
+
+path7.animate(0.62, function() {
+        path7.animate(0.92);
+});
+</script>
+
+<script>
+var svgPath8 = document.getElementById('hex-path-8');
+
+var path8 = new ProgressBar.Path(svgPath8, {
+    duration: 3000,
+});
+
+path8.animate(0.5, function() {
+        path8.animate(0.8);
+});
+</script>
+
+<script>
+var svgPath9 = document.getElementById('hex-path-9');
+
+var path9 = new ProgressBar.Path(svgPath9, {
+    duration: 3000,
+});
+
+path9.animate(0.66, function() {
+        path9.animate(0.96);
+});
+</script>
+
+<script>
+var svgPath10 = document.getElementById('hex-path-10');
+
+var path10 = new ProgressBar.Path(svgPath10, {
+    duration: 3000,
+});
+
+path10.animate(0.45, function() {
+        path10.animate(0.75);
+});
+</script>
+
+
+
+<!--script>
+var circle = new ProgressBar.Circle('#hex-container', {
+    color: '#FCB03C',
+    strokeWidth: 3,
+    trailWidth: 1,
+    duration: 1500,
+    text: {
+        value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * 100).toFixed(0));
+    }
+});
+
+circle.animate(1, function() {
+    circle.animate(0);
+})
+</script-->
+
+
+<!--script>
+var circle = new ProgressBar.Circle('#hex-container', {
+    color: '#FCB03C'
+});
+
+circle.animate(0.75);  // Number from 0.0 to 1.0
+</script-->
+
+
+
+</body>
+</html>
